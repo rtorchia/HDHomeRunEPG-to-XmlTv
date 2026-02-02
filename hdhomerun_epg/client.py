@@ -48,7 +48,12 @@ class HDHomeRunClient:
             self.discover_device_auth()
 
         logger.info(f"📺 Fetching HDHomeRun Web API Lineup for auth {self.device_auth}")
-        url = f"http://{self.host}/lineup.json"
+        
+        if settings.locallineup:
+            url = f"http://{self.host}/lineup.json"
+        else:
+            url = f"https://api.hdhomerun.com/api/lineup?DeviceAuth={self.device_auth}"
+            
         try:
             response = requests.get(url, timeout=10)
             response.raise_for_status()
