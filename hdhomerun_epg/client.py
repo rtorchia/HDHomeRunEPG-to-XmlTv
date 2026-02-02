@@ -49,7 +49,7 @@ class HDHomeRunClient:
 
         logger.info(f"📺 Fetching HDHomeRun Web API Lineup for auth {self.device_auth}")
         
-        if settings.locallineup:
+        if settings.local_lineup:
             url = f"http://{self.host}/lineup.json"
         else:
             url = f"https://api.hdhomerun.com/api/lineup?DeviceAuth={self.device_auth}"
