@@ -95,6 +95,8 @@ The application is fully configurable via Environment Variables.
 | 💾 | `HDHOMERUN_CACHE_ENABLED`| `True` | Set to `False` to completely disable caching. |
 | 📦 | `HDHOMERUN_CACHE_DB_PATH`| `epg_cache.db` | Path to the SQLite cache file. |
 | ⏳ | `HDHOMERUN_CACHE_TTL_SECONDS`| `86400` | How long (in seconds) to keep cached data (Default: 24h). |
+| 📼 | `HDHOMERUN_LOCAL_LINEUP`| `True` | Set to `False` for older HDHR devices. |
+
 
 ### ⚡ API Endpoints
 
