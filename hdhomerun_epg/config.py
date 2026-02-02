@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     cache_db_path: str = "epg_cache.db"
     cache_ttl_seconds: int = 86400  # 24 Hours
     cache_enabled: bool = True
+    local_lineup: bool = True
 
     class Config:
         env_prefix = "HDHOMERUN_"
