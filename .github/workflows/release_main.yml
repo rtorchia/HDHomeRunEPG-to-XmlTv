@@ -11,7 +11,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: thekoma/hdhomerunepgxml
+  IMAGE_NAME: rtorchia/hdhomerunepgxml
 
 jobs:
   release-and-build:
