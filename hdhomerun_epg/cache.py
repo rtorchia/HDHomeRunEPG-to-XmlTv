@@ -11,8 +11,9 @@ logger = logging.getLogger(__name__)
 
 class CacheManager:
     def __init__(self, db_path: str = "epg_cache.db"):
-        db_name = "epg_cache.db"
-        self.db_path = Path(db_path) / db_name
+        #db_name = "epg_cache.db"
+        #self.db_path = Path(db_path) / db_name
+        self.db_path = db_path
         self._init_db()
 
     def _init_db(self):
