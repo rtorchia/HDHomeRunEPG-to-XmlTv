@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 class CacheManager:
-    def __init__(self, db_path: str = "epg_cache.db"):
+    def __init__(self, db_path: str = "/core/epg_cache.db"):
         self.db_path = db_path
         self._init_db()
 
