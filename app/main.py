@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
     logger.info("🛑 Stopping HDHomeRun EPG Service")
 
 
-app = FastAPI(title="HDHomeRun EPG to XMLTV", version="2.0.0", lifespan=lifespan)
+app = FastAPI(title="HDHomeRun EPG to XMLTV", version="2.0.1", lifespan=lifespan)
 templates = Jinja2Templates(directory="app/templates")
 
 
