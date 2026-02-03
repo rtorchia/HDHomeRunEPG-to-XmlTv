@@ -3,14 +3,16 @@ import gzip
 import json
 import logging
 import time
+from pathlib import Path
 from typing import Optional, Dict, List, Any
 
 logger = logging.getLogger(__name__)
 
 
 class CacheManager:
-    def __init__(self, db_path: str = "/core/epg_cache.db"):
-        self.db_path = db_path
+    def __init__(self, db_path: str = "epg_cache.db"):
+        db_name = "epg_cache.db"
+        self.db_path = Path(db_path) / db_name
         self._init_db()
 
     def _init_db(self):
